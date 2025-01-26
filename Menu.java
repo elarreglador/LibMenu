@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// Menu v.20250126
+
 public class Menu {
 
 	// EJEMPLO DE USO

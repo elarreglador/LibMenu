@@ -2,6 +2,10 @@
 
 `Menu` es una librería en Java para crear menús interactivos en la consola de manera simple y efectiva. Esta librería permite al usuario seleccionar opciones de un menú definido, gestionando la entrada de datos y errores comunes como entradas no válidas.
 
+## Versiones
+
+20250126 - ✨ El menu es funcional
+
 ## Ejemplo de uso
 
 Encontraras ejemplos de uso en main(), el resultado suele ser similar a esto:
