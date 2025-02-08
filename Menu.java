@@ -1,6 +1,7 @@
 import java.util.Scanner;
+import java.util.List;
 
-// Menu v.20250126
+// Menu v.20250208
 
 public class Menu {
 
@@ -19,11 +20,10 @@ public class Menu {
 		System.out.println("Has seleccionado la opcion: " + Menu.menu(opciones, teclado));
 
 		// guardamos la seleccion en una variable
-		@SuppressWarnings("unused")
 		int seleccion = Menu.menu(opciones, teclado);
 
 		// usamos switch para gestionar la respuesta del menu
-		switch (Menu.menu(opciones, teclado)) {
+		switch (seleccion) {
 			// no hay un case 0
 			case 1:
 				System.out.println("opcion uno");
@@ -36,17 +36,24 @@ public class Menu {
 				break;
 		}
 
+		teclado.close();
 	}
 
-	// MUESTRA UN MENU CON LOS STRINGS DEL PARAMETRO
+	// MUESTRA UN MENU CON LOS STRINGS DEL PARAMETRO (ARRAY)
 	public static int menu(String[] opciones, Scanner teclado) {
-		// Usamos un único Scanner en toda la aplicacion
-		// opciones[0] es la cabecera
+		return mostrarMenu(opciones, teclado);
+	}
 
+	// SOBRECARGA PARA LISTA DE STRINGS
+	public static int menu(List<String> opciones, Scanner teclado) {
+		return mostrarMenu(opciones.toArray(new String[0]), teclado);
+	}
+
+	// LÓGICA COMPARTIDA
+	private static int mostrarMenu(String[] opciones, Scanner teclado) {
 		int retorno = -1;
 
 		while (true) {
-
 			System.out.println(opciones[0] + "\n");
 			for (int i = 1; i < opciones.length; i++) {
 				System.out.printf("   %d) %s%n", i, opciones[i]);
@@ -64,9 +71,7 @@ public class Menu {
 			} catch (NumberFormatException e) {
 				System.out.println("Entrada no válida. Inténtalo de nuevo.");
 			}
-
 		}
 		return retorno;
 	}
-
 }
