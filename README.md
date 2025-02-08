@@ -3,13 +3,13 @@
 `Menu` es una librería en Java para crear menús interactivos en la consola de manera simple y efectiva. Esta librería permite al usuario seleccionar opciones de un menú definido, gestionando la entrada de datos y errores comunes como entradas no válidas.
 
 ## Versiones
-
+20250208 - ✨ Tambien admite lista de opciones ademas de array
 20250126 - ✨ El menu es funcional
 
 ## Ejemplo de uso
 
 Encontraras ejemplos de uso en main(), el resultado suele ser similar a esto:
-
+```
 Cabecera del enunciado:
 
    1) Opcion A
@@ -17,16 +17,18 @@ Cabecera del enunciado:
    3) Opcion C
 
 : 2
+```
 
 ## Funcionamiento de la clase Menu
 
-La clase Menu incluye los siguientes métodos:
+La funcion Menu.menu() admite tanto una lista como un array de String
 
-Método menu(String[] opciones, Scanner teclado)
+menu(String[] opciones, Scanner teclado)
+menu(List<String> opciones, Scanner teclado)
 
 ### Parámetros:
 
-String[] opciones: Un array de String donde el primer elemento es la cabecera del menú y los siguientes son las opciones.
+String[] / List<String> opciones: Un array o lista de Strings donde el primer elemento es la cabecera del menú y los siguientes son las opciones.
 Scanner teclado: Un objeto Scanner para leer la entrada del usuario. Esto evita problemas al cerrar Scanner, se recomienda un unico Scanner para toda la app.
 
 ## Descripción:
