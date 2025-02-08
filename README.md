@@ -4,6 +4,7 @@
 
 ## Versiones
 20250208 - ✨ Tambien admite lista de opciones ademas de array
+
 20250126 - ✨ El menu es funcional
 
 ## Ejemplo de uso
@@ -24,6 +25,7 @@ Cabecera del enunciado:
 La funcion Menu.menu() admite tanto una lista como un array de String
 
 menu(String[] opciones, Scanner teclado)
+
 menu(List<String> opciones, Scanner teclado)
 
 ### Parámetros:
